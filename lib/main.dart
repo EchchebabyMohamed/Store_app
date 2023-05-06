@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-
+import 'package:store/pages/page_product.dart';
 void main() {
-  runApp( const MaterialApp(
-    home: Mytest(),
-  ));
+  runApp(MyApp());
 }
-class Mytest extends StatelessWidget {
-  const Mytest({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.cyan,
-      appBar: AppBar(backgroundColor: Colors.white,shadowColor: Colors.redAccent,),
-      body:const Text('hello mohamed'),);
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Store',
+      theme: ThemeData(),
+      home:const HomeScreen(),
+    );
   }
 }
